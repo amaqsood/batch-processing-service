@@ -16,12 +16,12 @@ import lombok.NoArgsConstructor;
 public class POSCFSOrder {
 
     @Id
-    //@GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     //Need above only if we are not setting primaryKey ID value
     private Integer Id;
 
     @Column(name = "pos_order_id")
-    private Integer posOrderId;
+    private String posOrderId;
 
     @Column(name = "cfs_order_summary_id")
     private Integer cfsOrderSummaryId;

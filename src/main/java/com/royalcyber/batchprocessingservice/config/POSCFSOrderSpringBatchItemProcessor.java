@@ -18,14 +18,13 @@ public class POSCFSOrderSpringBatchItemProcessor implements ItemProcessor<POSCFS
 
         var posOrderId = Optional.ofNullable(item.getPosOrderId()).isPresent()
                 && !item.getPosOrderId().isBlank() ?
-                Integer.valueOf(item.getPosOrderId()) : null;
+                item.getPosOrderId() : null;
 
         var cfsOrderNumber = Optional.ofNullable(item.getCfsOrderNumber()).isPresent()
                 && !item.getCfsOrderNumber().isBlank() ?
                 item.getCfsOrderNumber() : null;
 
         return POSCFSOrder.builder()
-                .Id(Optional.ofNullable(posOrderId).isPresent() ? posOrderId : null)
                 .cfsOrderSummaryId(summaryId)
                 .posOrderId(posOrderId)
                 .cfsOrderNumber(cfsOrderNumber)
