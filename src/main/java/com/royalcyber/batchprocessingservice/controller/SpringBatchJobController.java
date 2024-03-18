@@ -24,7 +24,7 @@ public class SpringBatchJobController {
     private Job job;
 
     @GetMapping("/ping")
-    String ping(){
+    String ping() {
         return "Batch Processing Service is alive!";
     }
 

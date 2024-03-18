@@ -71,7 +71,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>batch-processing-service</finalName>
+		<finalName>batch-processing-service-0.0.1-SNAPSHOT</finalName>
 	</build>
 
 </project>
