@@ -23,6 +23,11 @@ public class SpringBatchJobController {
     @Autowired
     private Job job;
 
+    @GetMapping("/ping")
+    String ping(){
+        return "Batch Processing Service is alive!";
+    }
+
     @GetMapping("/importPOSCFSMappedOrders")
     String importPOSCFSMappedOrders() {
         JobParameters jobParameters = new JobParametersBuilder()
